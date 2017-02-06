@@ -22,7 +22,6 @@ require 'capybara'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
 require 'rspec'
-# require './app/data_mapper_setup'
 require 'database_cleaner'
 
 # require_relative 'support/database_cleaner'
