@@ -8,15 +8,15 @@ describe Room do
   end
 
   let!(:date1) do
-    Calendardate.create(date: Date.new(2017,02,01))
+    create_date("2017-02-01")
   end
   
   let!(:date2) do
-    Calendardate.create(date: Date.new(2017,02,02))
+    create_date("2017-02-02")
   end
   
   let!(:date3) do
-    Calendardate.create(date: Date.new(2017,02,03))
+    create_date("2017-02-03")
   end
   
   let!(:user) do
@@ -54,4 +54,6 @@ describe Room do
   end
 end
 
-  
+def create_date(date)
+    Calendardate.create(date: Date.parse(date))
+end

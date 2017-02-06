@@ -12,18 +12,14 @@ class Room
   
   def dates_booked
     dates = []
-    self.calendardates.each { |d| dates << d }
-    dates
+    calendardates.each { |d| dates << d }
   end
   
   def owner
-    self.user
+    user
   end
   
   def booked?(date)
-    self.calendardates.each do |d|
-      return true if d == date
-    end
-    false
+    calendardates.any? { |d| d == date}
   end
 end
