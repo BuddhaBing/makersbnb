@@ -8,6 +8,12 @@ class Room
   property :price,        Integer, required: true
 
   belongs_to :user
-  has n, :dates, through: Resource
-
+  has n, :calendardates, through: Resource
+  
+  def dates_booked
+    dates = []
+    self.calendardates.each { |d| dates << d }
+    dates
+  end
+  
 end
