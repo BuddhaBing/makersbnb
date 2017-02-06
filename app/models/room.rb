@@ -16,4 +16,14 @@ class Room
     dates
   end
   
+  def owner
+    self.user
+  end
+  
+  def booked?(date)
+    self.calendardates.each do |d|
+      return true if d == date
+    end
+    false
+  end
 end
