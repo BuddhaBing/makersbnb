@@ -1,5 +1,5 @@
 class Makersbnb < Sinatra::Base
-  
+
   get '/users/new' do
 
   end
