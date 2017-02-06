@@ -7,4 +7,5 @@ class Booking
   belongs_to :user, required: true
   belongs_to :room, required: true
   belongs_to :date, required: true
+  
 end
