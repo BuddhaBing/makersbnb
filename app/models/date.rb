@@ -1,4 +1,4 @@
-class Date
+class Calendardate
   include DataMapper::Resource
 
   property :id, Serial
