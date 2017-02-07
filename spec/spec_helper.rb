@@ -29,6 +29,7 @@ require'./app/models/date'
 
 # require_relative 'support/database_cleaner'
 require_relative 'features/web_helper.rb'
+require_relative 'helpers/session_helper.rb'
 
 include DatabaseCleaner
 
@@ -49,11 +50,11 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
   end
-  
+
   config.before(:each) do
     DatabaseCleaner.start
   end
-  
+
   config.append_after(:each) do
     DatabaseCleaner.clean
   end

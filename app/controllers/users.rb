@@ -1,5 +1,5 @@
 class Makersbnb < Sinatra::Base
-  
+
   get '/users/new' do
     @user = User.new
     slim :'users/new'
