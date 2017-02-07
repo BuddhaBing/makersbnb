@@ -1,8 +1,8 @@
 class Makersbnb < Sinatra::Base
-
+  
   get '/users/new' do
+    @user = User.new
     slim :'users/new'
-    # @current_user = 'Pete'
   end
 
   post '/users' do
@@ -11,5 +11,7 @@ class Makersbnb < Sinatra::Base
                         user_name: params[:username],
                         password_digest: params[:password])
     @user.save
+    session[:user_id] = @user.id
+    redirect '/users/new'
   end
 end
