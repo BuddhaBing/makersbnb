@@ -24,12 +24,16 @@ feature "Registration of a new user" do
 
   scenario "User can't sign up with the same email address" do
     sign_up
+    click_button('Sign out')
     expect { sign_up(username: 'test02') }.not_to change(User, :count)
+    expect(page).to have_content "Email is already taken"
   end
 
   scenario "User can't sign up with the same user name" do
     sign_up
+    click_button('Sign out')
     expect { sign_up(email: 'test2@test.com') }.not_to change(User, :count)
+    expect(page).to have_content "User name is already taken"
   end
 
   scenario "Returning user can click on login" do
