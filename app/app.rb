@@ -12,8 +12,10 @@ require_relative 'controllers/sessions'
 
 require_relative 'data_mapper_setup'
 
+
 require_relative 'helpers'
-# require_relative 'controllers/peeps'
-# require_relative 'controllers/comments'
+
+require_relative 'controllers/rooms'
+
 
 include Helpers
