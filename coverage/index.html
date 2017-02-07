@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-02-07T08:57:59+00:00">2017-02-07T08:57:59+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-02-07T13:46:03+00:00">2017-02-07T13:46:03+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -153,7 +153,7 @@
       <tr>
         <td class="strong"><a href="#152c2be53127220623f4f1fdfd1ae175bd6a4c9c" class="src_link" title="spec/features/listing_a_room_spec.rb">spec/features/listing_a_room_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
+        <td>11</td>
         <td>6</td>
         <td>6</td>
         <td>0</td>
@@ -1307,46 +1307,52 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">    # sign_up</code>
+          <code class="ruby">    # sign_up TODO: uncomment this when signup works</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">    list_room</code>
+          
+          <code class="ruby">    # expect(page).to have_button &#39;New Room&#39; TODO: uncomment this when signup works and welcome.slim has this button</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
+          <code class="ruby">    list_room</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).to have_content &#39;Room Listed&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  scenario &#39;I cannot list a new room when not signed in&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
+          <code class="ruby">  scenario &#39;I cannot list a new room when not signed in&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).not_to have_button &#39;New Room&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
