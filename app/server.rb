@@ -14,7 +14,7 @@ class Makersbnb < Sinatra::Base
   Slim::Engine.set_options shortcut: {'&' => {tag: 'input', attr: 'type'}, '#' => {attr: 'id'}, '.' => {attr: 'class'}, '@' => {attr: 'role'}, '>' => {tag: 'form', attr: 'method'}, '<' => {tag: 'form', attr: 'method'} }
 
   get '/' do
-    slim :index
+    redirect '/users/new'
   end
 
   # start the server if ruby file executed directly

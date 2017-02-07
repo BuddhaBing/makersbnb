@@ -13,6 +13,6 @@ class Makersbnb < Sinatra::Base
                         password_confirmation: params[:password_confirmation])
     @user.save
     session[:user_id] = @user.id
-    redirect '/users/new'
+    redirect '/rooms'
   end
 end

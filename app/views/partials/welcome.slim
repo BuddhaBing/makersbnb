@@ -3,6 +3,10 @@
   form class="sign_out_form" action='/sessions' method="post"
     &hidden name="_method" value="delete"
     &submit name="sign_out" value="Sign out"
-
-  a href="/users/rooms" My Rooms
-  a href="/users/bookings" My Bookings
+    a href="/users/bookings" My Bookings
+    a href="/users/rooms" My Rooms
+- else
+  h2 Feel at home, anywhere
+  h3 Sign up to Makersbnb
+  form class="login" action='/sessions/new' method="get"
+    &submit name="login" value="Login"
