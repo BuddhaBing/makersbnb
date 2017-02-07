@@ -8,7 +8,7 @@ feature "Registration of a new user" do
     visit '/'
     sign_up
     # expect { sign_up }.to change(User, :count).by(1)
-    expect(page).to have_content('Hello Makersbnb!')
+    expect(page).to have_content('Welcome test')
     # expect(User.first.email).to eq('test@test.com')
   end
 # Fills in an email and password into the user signup form.
