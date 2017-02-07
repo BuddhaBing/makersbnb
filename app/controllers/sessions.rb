@@ -1,8 +1,7 @@
 class Makersbnb < Sinatra::Base
 
   get '/sessions/new' do
-    slim '/partials/header'
-
+      
   end
 
   post '/sessions' do
