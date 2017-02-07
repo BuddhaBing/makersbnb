@@ -5,7 +5,7 @@ require 'sinatra/flash'
 require 'sinatra/partial'
 require 'slim'
 require 'slim/include'
- 
+
 require_relative 'server'
 require_relative 'controllers/users'
 require_relative 'controllers/sessions'

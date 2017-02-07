@@ -12,3 +12,7 @@ def sign_up(name: 'test',
   fill_in :password_confirmation, with: password_confirmation
   click_button 'Sign Up'
 end
+
+def sign_out()
+  click_button 'Sign out'
+end

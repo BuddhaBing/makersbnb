@@ -7,8 +7,7 @@ html
     link href="//fonts.googleapis.com/css?family=Cambay&subset=latin" rel="stylesheet"
   body
     include partials/header.slim
-    header.welcome-header
-      include partials/welcome.slim
-      include partials/flash.slim
+    header.errors
+      / include partials/flash.slim
     main
       == yield
