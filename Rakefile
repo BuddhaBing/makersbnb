@@ -18,7 +18,7 @@ namespace :db do
   desc 'populate db with samples'
   task :populate do
     require_relative "auto-populate"
-    puts "auto_populatation complete"
+    puts "auto-populatation complete"
   end
 end
 
