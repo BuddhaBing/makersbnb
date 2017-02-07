@@ -1,11 +1,11 @@
 # require_relative 'web_helper'
 
 feature "Registration of a new user" do
-  
+
   scenario "Sign-up increases user count by one" do
     expect { sign_up }.to change(User, :count).by(1)
   end
-  
+
   scenario 'I can sign up as a new user' do
     sign_up
     expect(page).to have_content('Welcome, test')
@@ -21,14 +21,20 @@ feature "Registration of a new user" do
   scenario 'User cannot sign up without an email address' do
     expect { sign_up(email: nil) }.not_to change(User, :count)
   end
-  
+
   scenario "User can't sign up with the same email address" do
     sign_up
     expect { sign_up(username: 'test02') }.not_to change(User, :count)
   end
-  
+
   scenario "User can't sign up with the same user name" do
     sign_up
     expect { sign_up(email: 'test2@test.com') }.not_to change(User, :count)
+  end
+
+  scenario "Returning user can click on login" do
+    visit '/'
+    click_button('Login')
+    expect(page.current_path).to eq('/sessions/new')
   end
 end

@@ -1,7 +1,7 @@
 class Makersbnb < Sinatra::Base
-  
-  get '/sessions/new' do
 
+  get '/sessions/new' do
+    
   end
 
   post '/sessions' do
