@@ -1,9 +1,7 @@
 class Makersbnb < Sinatra::Base
 
   get '/sessions/new' do
-
     slim :'/sessions/new'
-
   end
 
   post '/sessions' do
@@ -22,6 +20,4 @@ class Makersbnb < Sinatra::Base
     flash.keep[:notice] = 'Goodbye!'
     redirect '/'
   end
-
-
 end
