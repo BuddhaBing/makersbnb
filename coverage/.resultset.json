@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/app.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/app.rb": [
         1,
         null,
         1,
@@ -22,7 +22,7 @@
         null,
         1
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/server.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/server.rb": [
         1,
         null,
         1,
@@ -46,53 +46,59 @@
         1,
         null
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/controllers/users.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/controllers/users.rb": [
+        1,
+        null,
+        1,
+        18,
+        18,
+        null,
+        null,
+        1,
+        9,
+        null,
+        null,
+        null,
+        null,
+        9,
+        9,
+        9,
+        null,
+        null
+      ],
+      "/media/sf_share/makers/wk6/makersbnb/app/controllers/sessions.rb": [
         1,
         null,
         1,
         null,
         null,
         null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         null,
         null,
         null
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/controllers/sessions.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/data_mapper_setup.rb": [
+        1,
         1,
         null,
         1,
-        0,
-        null,
-        null,
-        null,
+        1,
+        1,
         1,
         null,
-        null,
-        null,
         1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null
+        1,
+        1
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/data_mapper_setup.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/models/booking.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/models/booking.rb": [
         1,
         1,
         null,
@@ -105,7 +111,7 @@
         null,
         null
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/models/date.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/models/date.rb": [
         1,
         1,
         null,
@@ -116,7 +122,7 @@
         null,
         null
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/models/room.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/models/room.rb": [
         1,
         1,
         null,
@@ -143,8 +149,24 @@
         null,
         null
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/models/user.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/app/models/user.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
         1,
         null,
         1,
@@ -153,79 +175,95 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
+        1,
+        9,
+        9,
+        null,
+        null
+      ],
+      "/media/sf_share/makers/wk6/makersbnb/app/helpers.rb": [
+        1,
+        null,
+        1,
+        32,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/media/sf_share/makers/wk6/makersbnb/spec/features/web_helper.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        9,
+        null,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/media/sf_share/makers/wk6/makersbnb/spec/features/sign_out_spec.rb": [
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         null,
         null
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/app/helpers.rb": [
-        1,
-        null,
-        1,
-        0,
+      "/media/sf_share/makers/wk6/makersbnb/spec/features/signup_spec.rb": [
         null,
         null,
         1,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/spec/features/sign_out_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/spec/features/signup_spec.rb": [
-        null,
-        null,
         null,
         1,
+        2,
+        null,
         null,
         1,
         1,
         1,
         1,
         null,
-        0,
         null,
+        1,
+        2,
         null,
         null,
         null,
         null,
         1,
         2,
-        0,
-        0,
         null,
         null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
         1,
         2,
         null,
         null
       ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/spec/features/web_helper.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        4,
-        null,
-        4,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null
-      ],
-      "/Users/rob/Drive/makers/proper/week6/makersbnb/spec/models/room_spec.rb": [
+      "/media/sf_share/makers/wk6/makersbnb/spec/models/room_spec.rb": [
         1,
         null,
         1,
@@ -287,6 +325,6 @@
         null
       ]
     },
-    "timestamp": 1486463222
+    "timestamp": 1486475056
   }
 }
