@@ -5,12 +5,15 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/rooms' do
-    Room.create(name: params[:name],
+
+    room = Room.create(name: params[:name],
         address: params[:address],
         description: params[:description],
-        price: params[:price])
+        price: params[:price],
+        user: current_user)
     "Room Listed" # TODO update this to a path later when we
-                  # decide where it will redirect following room listing
+              # decide where it will redirect following room listing
+      
   end
 
 end

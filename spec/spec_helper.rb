@@ -28,11 +28,11 @@ require'./app/models/room'
 require'./app/models/date'
 
 # require_relative 'support/database_cleaner'
-<<<<<<< HEAD
+
 require_relative 'features/web_helper.rb'
-=======
+
 require_relative 'helpers/room_helper.rb'
->>>>>>> 75d5b29849d30088450f54f2eb7f890386440662
+
 
 include DatabaseCleaner
 
@@ -49,31 +49,18 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-<<<<<<< HEAD
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
   end
-  
+
   config.before(:each) do
     DatabaseCleaner.start
   end
-  
+
   config.append_after(:each) do
     DatabaseCleaner.clean
   end
-=======
-  # config.before(:suite) do
-  #   DatabaseCleaner.strategy = :truncation
-  #   DatabaseCleaner.clean_with(:truncation)
-  # end
 
-  # config.before(:each) do
-  #   DatabaseCleaner.start
-  # end
-
-  # config.append_after(:each) do
-  #   DatabaseCleaner.clean
-  # end
->>>>>>> 75d5b29849d30088450f54f2eb7f890386440662
 end
