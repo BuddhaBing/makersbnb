@@ -14,11 +14,11 @@ class Room
     dates = []
     calendardates.each { |d| dates << d }
   end
-  
+
   def owner
     user
   end
-  
+
   def booked?(date)
     calendardates.any? { |d| d == date}
   end
