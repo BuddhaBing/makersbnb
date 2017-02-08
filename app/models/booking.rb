@@ -6,6 +6,6 @@ class Booking
 
   belongs_to :user
   belongs_to :room
-  belongs_to :dateRange
+  belongs_to :date_range
 
 end
