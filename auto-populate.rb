@@ -73,7 +73,8 @@ Room.first_or_create(name:    "Walbrook",
 Booking.first_or_create(confirmed: true,
                         user: User.first(user_name: "iceDude"),
                         room: Room.first(name: "Tenpenny Towers"),
-                        calendardate: Calendardate.first_or_create(date: Time.new))
+                        calendardate: Calendardate.first_or_create(date: Time.new),
+                        calendardate: Calendardate.first_or_create(date: Time.new(2002, 10, 31))
 
 Booking.first_or_create(user: User.first(user_name: "mommaLovva"),
                         room: Room.first(name: "Trump Towers"),
