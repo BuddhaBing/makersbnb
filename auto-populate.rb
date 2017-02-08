@@ -1,38 +1,38 @@
 User.create(email:    "fake@fake.com",
             name:      "will farrah",
             user_name: "mommaLovva",
-            password: "1234",
-            password_confirmation: "1234")
+            password: "12345678",
+            password_confirmation: "12345678")
 
 User.create(email:    "kaisking@hotmail.com",
             name:      "Kaiser souzer",
             user_name: "iceDude",
-            password: "1234",
-            password_confirmation: "1234")
+            password: "12345678",
+            password_confirmation: "12345678")
 
 User.create(email:    "test@test.com",
             name:      "Max Powers",
             user_name: "blinkyMcgoo",
-            password: "1234",
-            password_confirmation: "1234")
+            password: "12345678",
+            password_confirmation: "12345678")
 
 User.create(email:    "wow@oh.com",
             name:      "Super Man",
             user_name: "flywithme",
-            password: "1234",
-            password_confirmation: "1234")
+            password: "12345678",
+            password_confirmation: "12345678")
 
 User.create(email:    "soon@late.com",
             name:      "Mr. Bean",
             user_name: "comeon",
-            password: "1234",
-            password_confirmation: "1234")
+            password: "12345678",
+            password_confirmation: "12345678")
 
 User.create(email:    "up@down.com",
             name:      "Jack Black",
             user_name: "jackme",
-            password: "1234",
-            password_confirmation: "1234")
+            password: "12345678",
+            password_confirmation: "12345678")
 
 room = Room.first_or_create(name:    "Tenpenny Towers",
             address: "221b Bakers Street",

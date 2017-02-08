@@ -13,6 +13,7 @@ class User
   property :password_digest,String,required: true, length: 60
 
   validates_confirmation_of :password
+  validates_length_of :password, min: 8
 
   has n, :rooms
   has n, :bookings
