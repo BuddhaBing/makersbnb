@@ -4,7 +4,7 @@ feature 'Listing a room' do
     click_link('My Rooms')
     expect(page).to have_link 'List a Room'
     expect{list_room}.to change(Room, :count).by(1)
-    expect(page).to have_content 'Room Listed'
+    expect(page).to have_content 'billy'
 
   end
   scenario 'I cannot list a new room when not signed in' do

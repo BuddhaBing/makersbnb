@@ -14,7 +14,7 @@ section.room-wrapper
     section.rooms-container
         - @rooms.each do |room|
             article.rooms
-                a href="/rooms/#{room.id}"
+                a href="/rooms/#{room.id}" id="room_#{room.id}"
                     section.room.room-name
                         == room.name
                     section.room.room-address
@@ -23,6 +23,5 @@ section.room-wrapper
                         == room.description
                     section.room.room-price
                         | £
-                        == room.price 
+                        == room.price
                         |  per night
-            
