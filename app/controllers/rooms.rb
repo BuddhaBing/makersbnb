@@ -24,4 +24,11 @@ class Makersbnb < Sinatra::Base
     @room = Room.first(id: params[:room_id])
     slim :'rooms/individual'
   end
+
+  patch '/rooms' do
+    p params
+    @room = Room.first(id: params[:room_id])
+    @room.DateRanges << DateRange.first_or_create(start_date: params[:start_date],end_date: params[:end_date],room: @room)
+    p @room.errors
+  end
 end

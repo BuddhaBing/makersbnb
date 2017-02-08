@@ -3,3 +3,16 @@ h2 == @room.user.user_name
 h2 == @room.address
 h2 == @room.description
 h2 == @room.price 
+
+form id="date_range_form" action="/rooms" method="post" 
+  &hidden name="room_id" value=@room.id
+  
+  &hidden name="_method" value="patch" 
+  label for="start_date" Start Date:
+  &date name="start_date" id="start_date" required="true"
+  br
+  label for="end_date" End Date:
+  &date name="end_date" id="end_date" required="true"
+  br
+  &submit name="add_date" value="Confirm"
+  
