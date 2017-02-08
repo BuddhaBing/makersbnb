@@ -20,4 +20,8 @@ class Makersbnb < Sinatra::Base
               # decide where it will redirect following room listing
   end
 
+  get '/rooms/:room_id' do
+    @room = Room.first(id: params[:room_id])
+    slim :'rooms/individual'
+  end
 end
