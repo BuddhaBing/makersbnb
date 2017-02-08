@@ -8,7 +8,7 @@ class Room
   property :price,        Integer, required: true
 
   belongs_to :user
-  has n, :DateRanges, through: Resource
+  has n, :DateRanges
 
   def dates_booked(date_1, date_2)
     #for each date in between dates run booked?
