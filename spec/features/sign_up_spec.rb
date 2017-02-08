@@ -29,4 +29,3 @@ feature "Registration of a new user" do
     expect { sign_up(email: 'test2@test.com') }.not_to change(User, :count)
     expect(page).to have_content "User name is already taken"
   end
-end

@@ -27,4 +27,9 @@ feature 'Sign in' do
     expect(current_path).to eq '/sessions/new'
     expect(page).to have_content('The email or password entered is incorrect')
   end
+  
+  scenario "I can't see the sign-up form once I'm signed in" do
+    sign_up
+    expect(page).to_not have_field("name")
+  end
 end
