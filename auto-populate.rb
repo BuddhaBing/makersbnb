@@ -1,17 +1,21 @@
-User.first_or_create(email:    "fake@fake.com",
-                    name:      "will farrah",
-                    user_name: "mommaLovva",
-                    password_digest: "THISISAREALHASHHONEST")
+User.create(email:    "fake@fake.com",
+            name:      "will farrah",
+            user_name: "mommaLovva",
+            password: "1234",
+            password_confirmation: "1234")
 
-User.first_or_create(email:    "kaisking@hotmail.com",
-                    name:      "Kaiser souzer",
-                    user_name: "iceDude",
-                    password_digest: "THISISAREALHASHHONEST")
+User.create(email:    "kaisking@hotmail.com",
+            name:      "Kaiser souzer",
+            user_name: "iceDude",
+            password: "1234",
+            password_confirmation: "1234")
 
-User.first_or_create(email:    "test@test.com",
-                    name:      "Max Powers",
-                    user_name: "blinkyMcgoo",
-                    password_digest: "THISISAREALHASHHONEST")
+
+User.create(email:    "test@test.com",
+            name:      "Max Powers",
+            user_name: "blinkyMcgoo",
+            password: "1234",
+            password_confirmation: "1234")
 
 Room.first_or_create(name:    "Tenpenny Towers",
             address: "221b Bakers Street",
@@ -36,8 +40,7 @@ Booking.first_or_create(confirmed: true,
                         room: Room.first(name: "Tenpenny Towers"),
                         calendardate: Calendardate.first_or_create(date: Time.new))
 
-Booking.first_or_create(
-                        user: User.first(user_name: "mommaLovva"),
+Booking.first_or_create(user: User.first(user_name: "mommaLovva"),
                         room: Room.first(name: "Trump Towers"),
                         calendardate: Calendardate.first_or_create(date: Time.new))
 
