@@ -1,13 +1,8 @@
-# require_relative 'web_helper'
-
 feature "Registration of a new user" do
-
-  scenario "Sign-up increases user count by one" do
-    expect { sign_up }.to change(User, :count).by(1)
-  end
 
   scenario 'I can sign up as a new user' do
     sign_up
+    expect { sign_up }.to change(User, :count).by(1)
     expect(page).to have_content('Welcome, test')
     expect(User.first.email).to eq('test@test.com')
   end

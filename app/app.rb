@@ -12,6 +12,7 @@ require_relative 'controllers/users'
 require_relative 'controllers/sessions'
 require_relative 'controllers/rooms'
 require_relative 'controllers/bookings'
+require_relative 'controllers/payments'
 
 require_relative 'data_mapper_setup'
 
