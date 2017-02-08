@@ -1,0 +1,28 @@
+header
+    h2 Book a Room
+    h3 Find the perfect room, for the perfect trip
+section.room-wrapper
+    - if current_user
+        section.list
+            .list-button
+                a href="/rooms/new" List a Room
+    section.search
+        form id="search-rooms" name="search-rooms" action="/rooms" method="post"
+            &date name="from" id="from"
+            &date name="to" id="to"
+            &submit name="search" id="search" value="Search"
+    section.rooms-container
+        - @rooms.each do |room|
+            article.rooms
+                a href="/rooms/#{room.id}"
+                    section.room.room-name
+                        == room.name
+                    section.room.room-address
+                        == room.address
+                    section.room.room-description
+                        == room.description
+                    section.room.room-price
+                        | £
+                        == room.price 
+                        |  per night
+            

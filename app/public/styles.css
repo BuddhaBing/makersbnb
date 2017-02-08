@@ -62,7 +62,7 @@ main {
     display: inline-block;
 }
 
-.sign-in a, .register a {
+.sign-in a, .register a, .list-button a {
     background-color: #fff;
     padding: 5px 15px 1px 14px;
     border-radius: 6px;
@@ -105,6 +105,59 @@ main {
     margin-right: 1em;
     margin-left: 5px;
     margin-bottom: .5em
+}
+
+.room-wrapper {
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+article.rooms {
+    border: 1px solid #e1e8ed;
+    color: skyblue;
+    /*line-height: 2;*/
+    cursor: pointer;
+    position: relative;
+    min-height: 51px;
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: #ffffff;
+    margin-bottom: 1em;
+}
+
+article.rooms:hover {
+    background-color: #efefef;
+    border: 1px solid skyblue;
+}
+
+.search {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#from, #to {
+    margin-top: 1em;
+    margin-right: 2em;
+    font-size: 1.5em;
+}
+
+.room-name {
+    font-weight: 600;
+    font-family: Arvo, sans-serif;
+    font-size: 1.5em;
+}
+
+.room-price {
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.room {
+    margin-bottom: 1em;
 }
 
 #bookings_made {

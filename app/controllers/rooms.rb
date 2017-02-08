@@ -3,8 +3,9 @@ class Makersbnb < Sinatra::Base
   get '/rooms/new' do
     slim :'rooms/new'
   end
-  
+
   get '/rooms' do
+    @rooms = Room.all
     slim :'rooms/index'
   end
 

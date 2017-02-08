@@ -2,14 +2,11 @@
   header
     a href="/"
       h1 Makersbnb
-    .bottombar
-    
-- if !current_user
-    .register
-      a href="/users/new" Sign up
-    .sign-in
-      a href="/sessions/new" Sign in
-- else
-    include partials/welcome.slim
-br
-br
+.bottombar
+  - if !current_user
+      .register
+        a href="/users/new" Sign up
+      .sign-in
+        a href="/sessions/new" Sign in
+  - else
+      include partials/welcome.slim
