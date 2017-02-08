@@ -10,6 +10,10 @@ body {
     border-bottom: 1px solid #e1e8ed;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     background-color: #ffffff;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+   -moz-box-shadow: 0 8px 6px -6px black;
+        box-shadow: 0 8px 6px -6px black;
+}
 }
 
 h1 {
@@ -88,6 +92,7 @@ main {
     background: #fff;
     margin: 2em;
     border: 1px solid skyblue;
+    box-shadow: 0 0 30px -7px rgb(0, 0, 0);
 }
 
 .sign-in-form input[type="text"], .sign-in-form input[type="password"], .sign-up-form input[type="text"], .sign-up-form input[type="password"] {
