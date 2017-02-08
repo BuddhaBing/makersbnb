@@ -2,14 +2,6 @@ h1 Bookings
 
 div id="bookings_made"
   | Bookings I've made
-  - if bookings.empty?
-    - else
-      table
-        - bookings.each do |a|
-          <tr><td>#{a.confirmed}</td></tr>
-
-
-
 
 
 div id="bookings_received"

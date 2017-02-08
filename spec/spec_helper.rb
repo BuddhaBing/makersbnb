@@ -31,6 +31,7 @@ require'./app/models/date'
 
 require_relative 'helpers/session_helper.rb'
 require_relative 'helpers/room_helper.rb'
+require_relative 'helpers/bookings_helper.rb'
 
 
 include DatabaseCleaner
