@@ -14,12 +14,12 @@ feature "Registration of a new user" do
 
   scenario 'Requires a matching confirmation password' do
     expect { sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
-    # expect(current_path).to eq('/users')
-    # expect(page).to have_content('Password and confirmation password do not match')
+    expect(page).to have_content('Password does not match the confirmation')
   end
 
   scenario 'User cannot sign up without an email address' do
     expect { sign_up(email: nil) }.not_to change(User, :count)
+    expect(page).to have_content('Email must not be blank')
   end
 
   scenario "User can't sign up with the same email address" do
@@ -34,11 +34,5 @@ feature "Registration of a new user" do
     click_button('Sign out')
     expect { sign_up(email: 'test2@test.com') }.not_to change(User, :count)
     expect(page).to have_content "User name is already taken"
-  end
-
-  scenario "Returning user can click on login" do
-    visit '/'
-    click_link('Sign in')
-    expect(page.current_path).to eq('/sessions/new')
   end
 end
