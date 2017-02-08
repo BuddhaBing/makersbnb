@@ -3,8 +3,8 @@ feature 'Viewing rooms' do
     sign_up
     list_room
     visit ('/rooms')
-    expect(page).to have_content 'The Penthouse'
-    expect(page).to have_content '1 Fake Road, Fakesville, Notrealshire, FA43 123'
-    expect(page).to have_content 'Lovely non-existant location, very quiet'
+    expect(page).to have_content Room.first.name
+    expect(page).to have_content Room.first.address
+    expect(page).to have_content Room.first.description
   end
 end

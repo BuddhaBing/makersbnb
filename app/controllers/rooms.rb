@@ -18,7 +18,6 @@ class Makersbnb < Sinatra::Base
         user: current_user)
     "Room Listed" # TODO update this to a path later when we
               # decide where it will redirect following room listing
-
   end
 
 end

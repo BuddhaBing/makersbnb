@@ -1,4 +1,4 @@
-def list_room(name)
+def list_room(name: "billy")
   visit '/rooms/new'
   fill_in :name, with: name
   fill_in :address,   with: '1 Fake Road, Fakesville, Notrealshire, FA43 123'
