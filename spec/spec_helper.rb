@@ -24,9 +24,6 @@ require 'capybara/poltergeist'
 require 'rspec'
 require 'database_cleaner'
 
-require'./app/models/room'
-require'./app/models/date'
-
 # require_relative 'support/database_cleaner'
 
 require_relative 'helpers/session_helper.rb'

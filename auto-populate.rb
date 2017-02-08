@@ -70,17 +70,17 @@ Room.first_or_create(name:    "Walbrook",
             price: "5500",
             user: User.first(user_name: "iceDude"))
 
-Booking.first_or_create(confirmed: true,
-                        user: User.first(user_name: "iceDude"),
-                        room: Room.first(name: "Tenpenny Towers"),
-                        calendardate: Calendardate.first_or_create(date: Time.new),
-                        calendardate: Calendardate.first_or_create(date: Time.new(2002, 10, 31)))
-
-Booking.first_or_create(user: User.first(user_name: "mommaLovva"),
-                        room: Room.first(name: "Trump Towers"),
-                        calendardate: Calendardate.first_or_create(date: Time.new))
-
-Booking.first_or_create(confirmed: false,
-                        user: User.first(user_name: "blinkyMcgoo"),
-                        room: Room.first(name: "The Enchanted Cave"),
-                        calendardate: Calendardate.first_or_create(date: Time.new))
+# Booking.first_or_create(confirmed: true,
+#                         user: User.first(user_name: "iceDude"),
+#                         room: Room.first(name: "Tenpenny Towers"),
+#                         calendardate: Calendardate.first_or_create(date: Time.new),
+#                         calendardate: Calendardate.first_or_create(date: Time.new(2002, 10, 31)))
+#
+# Booking.first_or_create(user: User.first(user_name: "mommaLovva"),
+#                         room: Room.first(name: "Trump Towers"),
+#                         calendardate: Calendardate.first_or_create(date: Time.new))
+#
+# Booking.first_or_create(confirmed: false,
+#                         user: User.first(user_name: "blinkyMcgoo"),
+#                         room: Room.first(name: "The Enchanted Cave"),
+#                         calendardate: Calendardate.first_or_create(date: Time.new))
