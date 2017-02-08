@@ -1,2 +1,8 @@
 - if flash[:notice]
   div id='notice' == flash[:notice]
+
+- if flash[:errors] && !flash[:errors].empty?
+  ul id='errors'
+    h4 Oops, looks like we've got some errors...
+    - flash[:errors].each do |error|
+      li == error
