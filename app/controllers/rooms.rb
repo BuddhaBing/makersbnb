@@ -8,7 +8,12 @@ class Makersbnb < Sinatra::Base
     @rooms = Room.all
     slim :'rooms/index'
   end
-
+  
+  get'/rooms/:id' do
+    @room = Room.first(id: params[:id])
+    slim :'bookings/new'
+  end
+  
   post '/rooms' do
 
     room = Room.create(name: params[:name],
