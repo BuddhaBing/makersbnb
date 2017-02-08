@@ -10,7 +10,8 @@ class Room
   belongs_to :user
   has n, :DateRanges, through: Resource
 
-  def dates_booked
+  def dates_booked(date_1, date_2)
+    #for each date in between dates run booked?
   end
 
   def booked?(date)

@@ -6,6 +6,6 @@ class Booking
 
   belongs_to :user, required: true
   belongs_to :room, required: true
-  belongs_to :DateRange, required: true
+  belongs_to :dateRange, required: true
 
 end

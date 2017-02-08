@@ -70,17 +70,17 @@ Room.first_or_create(name:    "Walbrook",
             price: "5500",
             user: User.first(user_name: "iceDude"))
 
-# Booking.first_or_create(confirmed: true,
-#                         user: User.first(user_name: "iceDude"),
-#                         room: Room.first(name: "Tenpenny Towers"),
-#                         calendardate: Calendardate.first_or_create(date: Time.new),
-#                         calendardate: Calendardate.first_or_create(date: Time.new(2002, 10, 31)))
-#
-# Booking.first_or_create(user: User.first(user_name: "mommaLovva"),
-#                         room: Room.first(name: "Trump Towers"),
-#                         calendardate: Calendardate.first_or_create(date: Time.new))
-#
-# Booking.first_or_create(confirmed: false,
-#                         user: User.first(user_name: "blinkyMcgoo"),
-#                         room: Room.first(name: "The Enchanted Cave"),
-#                         calendardate: Calendardate.first_or_create(date: Time.new))
+Booking.first_or_create(confirmed: true,
+                         user: User.first(user_name: "iceDude"),
+                         room: Room.first(name: "Tenpenny Towers"),
+                         dateRange: DateRange.first_or_create(start_date: Time.new(2001,1,1),end_date: Time.new(2001,1,2)))
+
+
+Booking.first_or_create(user: User.first(user_name: "mommaLovva"),
+                        room: Room.first(name: "Trump Towers"),
+                        dateRange: DateRange.first_or_create(start_date: Time.new(2015,1,3),end_date: Time.new(2016,1,2)))
+
+Booking.first_or_create(confirmed: false,
+                        user: User.first(user_name: "blinkyMcgoo"),
+                        room: Room.first(name: "The Enchanted Cave"),
+                        dateRange: DateRange.first_or_create(start_date: Time.new(2015,3,1),end_date: Time.new(2001,4,2)))
