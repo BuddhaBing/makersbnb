@@ -3,6 +3,7 @@ feature 'Sign out' do
     visit '/'
     sign_up
     sign_out
-    #expect(page).to have_content('Goodbye!')
+    expect(page).to have_content('Goodbye!')
+    expect(page).not_to have_content('Welcome, ')
   end
 end
