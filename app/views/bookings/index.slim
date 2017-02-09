@@ -2,7 +2,7 @@ h1 Bookings
 
 div id="bookings_requested"
   | Bookings I've requested
-  - @requested_bookings.each do |booking|
+  - @bookings.each do |booking|
       article.booking
               section.booking.room-name
                   == booking.room.name
@@ -20,7 +20,7 @@ div id="bookings_requested"
 
 div id="bookings_received"
   | Bookings I've received
-  - @received_bookings.each do |booking|
+  - @rooms.each do |booking|
       article.booking
               section.booking.room-name
                   == booking.room.name
@@ -34,4 +34,3 @@ div id="bookings_received"
                   == booking.date_range.end_date
               section.booking.status
                   == booking_status(booking.confirmed)
-
