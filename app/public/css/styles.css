@@ -76,6 +76,22 @@ main {
 
 .sign_out_form {
     float: right;
+    margin-right: 5%;
+    margin-top: -5%;
+    padding: 0.5%;
+    background: #f5f5f5;
+    border: inset;
+    border-radius: 5%;
+}
+
+.sign_out_form_links {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: 2px solid deepskyblue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10%;
 }
 
 #notice {
