@@ -1,36 +1,34 @@
 h1 Bookings
 
-div id="bookings_requested"
-  | Bookings I've requested
+div id="bookings_made"
+  | Bookings I've made
   - @bookings.each do |booking|
-      article.booking
-              section.booking.room-name
-                  == booking.room.name
-              section.booking.room-price
-                  | £
-                  == booking.room.price
-                  |  per night
-              section.booking.room-dates
-                  == booking.date_range.start_date
-                  |  -
-                  == booking.date_range.end_date
-              section.booking.status
-                  == booking_status(booking.confirmed)
-
-
+    article.bookings
+      section.name
+        == booking.room.name
+      section.description
+        == booking.room.description
+      section.price
+        |  £
+        == booking.room.price
+      section.dates
+        == booking.date_range.start_date.strftime("From %m/%d/%Y ")
+        == booking.date_range.end_date.strftime("to %m/%d/%Y")
+      section.booking.status
+        == booking_status(booking.confirmed)
 div id="bookings_received"
   | Bookings I've received
-  - @rooms.each do |booking|
-      article.booking
-              section.booking.room-name
-                  == booking.room.name
-              section.booking.room-price
-                  | £
-                  == booking.room.price
-                  |  per night
-              section.booking.room-dates
-                  == booking.date_range.start_date
-                  |  -
-                  == booking.date_range.end_date
-              section.booking.status
-                  == booking_status(booking.confirmed)
+  - @rooms.each do |room|
+    article.bookings
+      section.name
+        == room.name
+      section.description
+        == room.description
+      section.price
+        |  £
+        == room.price
+      section.dates
+        == booked_room(room.id).date_range.start_date.strftime("From %m/%d/%Y ")
+        == booked_room(room.id).date_range.end_date.strftime("to %m/%d/%Y")
+      section.booking.status
+        == booking_status(booked_room(room.id))

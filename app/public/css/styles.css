@@ -252,18 +252,23 @@ article.rooms:hover {
     margin-bottom: 1em;
 }
 
-#bookings_requested {
-  position: absolute;
-  left:20%;
-  top: 40%;
+#bookings_made {
+    float: left;
+    width: 50%;
+    text-align: left;
 }
 
 #bookings_received {
-  position: absolute;
-  right:20%;
-  top: 40%;
+    float: right;
+    width: 50%;
+    text-align: right;
 }
 
 .date-selector {
     margin-left: 5%;
+}
+
+.bookings {
+    margin-bottom: 2em;
+    margin-top: 1em;
 }
