@@ -12,13 +12,17 @@ module Helpers
     @body_class = class_name
   end
 
-  def booked_room(room_id)
-    Booking.first(room_id: room_id)
-  end
-
   def booking_status(status)
     return "pending" if status.nil?
     return "accepted" if status
     return "declined" unless status
+  end
+
+  def pretty_start_date(booking)
+    booking.date_range.start_date.strftime("From %m/%d/%Y ")
+  end
+
+  def pretty_end_date(booking)
+    booking.date_range.end_date.strftime("to %m/%d/%Y ")
   end
 end

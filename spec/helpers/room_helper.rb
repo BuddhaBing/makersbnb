@@ -16,10 +16,3 @@ def select_room
   visit('/rooms')
   click_link ('room_1')
 end
-
-def book_room
-select_room
-fill_in :from, with: "2017-02-09"
-fill_in :to, with: "2017-02-10"
-click_button "Book"
-end

@@ -1,5 +1,4 @@
 h1 Bookings
-
 div id="bookings_made"
   | Bookings I've made
   - @bookings.each do |booking|
@@ -12,27 +11,28 @@ div id="bookings_made"
         |  £
         == booking.room.price
       section.dates
-        == booking.date_range.start_date.strftime("From %m/%d/%Y ")
-        == booking.date_range.end_date.strftime("to %m/%d/%Y")
+        == pretty_start_date(booking)
+        == pretty_end_date(booking)
       section.booking.status
         == booking_status(booking.confirmed)
 div id="bookings_received"
   | Bookings I've received
   - @rooms.each do |room|
-    article.bookings
-      section.name
-        == room.name
-      section.description
-        == room.description
-      section.price
-        |  £
-        == room.price
-      section.dates
-        == booked_room(room.id).date_range.start_date.strftime("From %m/%d/%Y ")
-        == booked_room(room.id).date_range.end_date.strftime("to %m/%d/%Y")
-      section.booking.status
-        == booking_status(booked_room(room.id).confirmed)
-        - if booked_room(room.id).confirmed == nil 
-          form id="status-buttons" name="status-buttons" action="/bookings" method="post"
-          &submit name="accept" id="accept" value="Accept"
-          &submit name="decline" id="decline" value="Decline"
+    - room.bookings.each do |booking|
+      article.bookings
+        section.name
+          == booking.room.name
+        section.description
+          == booking.room.description
+        section.price
+          |  £
+          == booking.room.price
+          section.dates
+            == pretty_start_date(booking)
+            == pretty_end_date(booking)  
+        section.booking.status
+          == booking_status(booking.confirmed)
+          - if booking.confirmed == nil 
+            form id="status-buttons" name="status-buttons" action="/bookings" method="post"
+            &submit name="accept" id="accept" value="Accept"
+            &submit name="decline" id="decline" value="Decline"
