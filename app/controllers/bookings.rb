@@ -7,7 +7,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/bookings' do
-    DateRange.first_or_create(start_date: params[:from],
+    date = DateRange.first_or_create(start_date: params[:from],
                               end_date: params[:to])
     Booking.create(user_id: session[:user_id],
                    room_id: params[:room_id],
