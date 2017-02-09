@@ -13,7 +13,7 @@ div id="bookings_made"
         == booking.room.price
       section.dates
         == booking.date_range.start_date.strftime("From %m/%d/%Y")
-        == booking.date_range.end_date.strftime("to %m/%d/%Y")
+        == booking.date_range.end_date.strftime(" to %m/%d/%Y")
 div id="bookings_received"
   | Bookings I've received
   - @rooms.each do |room|
