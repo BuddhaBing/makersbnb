@@ -201,9 +201,9 @@ article.rooms:hover {
     margin-bottom: 1em;
 }
 
-#bookings_made {
+#bookings_requested {
   position: absolute;
-  right:20%;
+  left:20%;
   top: 40%;
 }
 
