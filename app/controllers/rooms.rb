@@ -24,4 +24,14 @@ class Makersbnb < Sinatra::Base
     redirect ('/rooms')
   end
 
+  get '/rooms/:room_id' do
+    @room = Room.first(id: params[:room_id])
+    slim :'rooms/individual'
+  end
+
+  patch '/rooms' do
+    @room = Room.first(id: params[:room_id])
+    @room.date_ranges << DateRange.first_or_create(start_date: params[:start_date],end_date: params[:end_date])
+    @room.save
+  end
 end
