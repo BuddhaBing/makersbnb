@@ -15,12 +15,12 @@ p
 -if current_user == @room.user
   .edit_room-button
     a href="edit your room" Edit room
+
 -if current_user == @room.user
   h2 add a list of dates the room is available
-  form id="date_range_form" action="/rooms" method="post"
+  form id="date_range_form" action="/rooms/dates" method="post"
+  &hidden name="_method" value="patch"
     &hidden name="room_id" value=@room.id
-
-    &hidden name="_method" value="patch"
     label for="start_date" Start Date:
     &date name="start_date" id="start_date" required="true"
     br

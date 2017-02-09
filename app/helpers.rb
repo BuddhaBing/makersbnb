@@ -16,4 +16,9 @@ module Helpers
     Booking.first(room_id: room_id)
   end
 
+  def booking_status(status)
+    return "pending" if status.nil?
+    return "accepted" if status
+    return "declined" unless status
+  end
 end
