@@ -202,11 +202,15 @@ article.rooms:hover {
 }
 
 #bookings_made {
-    float: left;
+  position: absolute;
+  right:20%;
+  top: 40%;
 }
 
 #bookings_received {
-    float: right;
+  position: absolute;
+  right:20%;
+  top: 40%;
 }
 
 .date-selector {

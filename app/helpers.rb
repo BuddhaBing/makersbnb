@@ -12,4 +12,9 @@ module Helpers
     @body_class = class_name
   end
 
+  def booking_status(status)
+    return "pending" if status.nil?
+    return "accepted" if status
+    return "declined" unless status
+  end
 end

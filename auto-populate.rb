@@ -105,3 +105,9 @@ Booking.first_or_create(confirmed: false,
                         user: User.first(user_name: "blinkyMcgoo"),
                         room: Room.first(name: "The Enchanted Cave"),
                         date_range_id: date.id)
+
+date = DateRange.first_or_create(start_date: Time.new(2015,3,25),end_date: Time.new(2001,4,2))
+Booking.first_or_create(confirmed: false,
+                        user: User.first(user_name: "blinkyMcgoo"),
+                        room: Room.first(name: "The Swollows Bridge"),
+                        date_range_id: date.id)
