@@ -1,15 +1,19 @@
 class Makersbnb < Sinatra::Base
 
   get '/bookings' do
-    @requested_bookings = Booking.all(user: current_user)
+    @bookings = Booking.all(user_id: session[:user_id])
+    @rooms = Room.all(user_id: session[:user_id])
 
-    @received_bookings = Booking.all()
-    @received_bookings = @received_bookings.select{|booking| booking.room.user === current_user}
     slim :'bookings/index'
   end
 
   post '/bookings' do
-    #TODO Input database stuff once date ranges implemented
+    date = DateRange.first_or_create(start_date: params[:from],
+                              end_date: params[:to])
+    Booking.create(user_id: session[:user_id],
+                   room_id: params[:room_id],
+                   date_range_id: date.id)
     redirect '/bookings'
   end
+
 end
