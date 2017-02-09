@@ -7,12 +7,16 @@ def list_room(name: "billy")
   click_button 'List Room'
 end
 
-def select_room
+def create_users_and_room
   sign_up
   list_room(name: "Trump Towers")
   sign_out
   sign_up(username: 'test02',
           email: 'test02@test.com')
-  visit('/rooms')
+  visit('/rooms/search')
+end
+
+def select_room
+  create_users_and_room
   click_link ('room_1')
 end
