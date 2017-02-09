@@ -3,7 +3,6 @@ class Makersbnb < Sinatra::Base
   get '/bookings' do
     @bookings = Booking.all(user_id: session[:user_id])
     @rooms = Room.all(user_id: session[:user_id])
-
     slim :'bookings/index'
   end
 

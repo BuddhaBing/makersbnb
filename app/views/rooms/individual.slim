@@ -1,6 +1,3 @@
-script src="/js/jquery.js"
-script src="/js/rooms/room_edit.js"
-
 p
   == @room.name
   br
@@ -12,9 +9,25 @@ p
   br
   == @room.price
   br
+.edit_room_form style="display:none;"
+  form id="edit-room" action="/rooms/edit" method="post"
+    &hidden name="_method" value="patch"
+    &hidden name="room_id" value=@room.id
+    label for="name" Name:
+    &text name="name" required="true" value=@room.name
+    br
+    label for="address" Address:
+    textarea name="address" id="address" form="edit-room" required="true" ==@room.address
+    br
+    label for="description" Description:
+    textarea name="description" id="description" form="edit-room" required="true" ==@room.description
+    br
+    label for="price" Price per night (£):
+    &number step="0.01" min="0" name="price" required="true" value=@room.price
+    &submit name="edit_room" value="Edit Room" form="edit-room"
+
 -if current_user == @room.user
-  .edit_room-button
-    a href="edit your room" Edit room
+&button value="Edit room" id="edit_room"
 
 -if current_user == @room.user
   h2 add a list of dates the room is available
