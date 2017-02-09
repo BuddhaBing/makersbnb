@@ -9,11 +9,6 @@ class Makersbnb < Sinatra::Base
     slim :'rooms/index'
   end
 
-  get'/rooms/:id' do
-    @room = Room.first(id: params[:id])
-    slim :'bookings/new'
-  end
-
   post '/rooms' do
     room = Room.create(name: params[:name],
         address: params[:address],
@@ -28,9 +23,22 @@ class Makersbnb < Sinatra::Base
     slim :'rooms/individual'
   end
 
-  patch '/rooms' do
+  patch '/rooms/dates' do
     @room = Room.first(id: params[:room_id])
     @room.date_ranges << DateRange.first_or_create(start_date: params[:start_date],end_date: params[:end_date])
     @room.save
+    redirect "/rooms/#{room.id}"
   end
+
+  patch '/rooms/edit' do
+    @room = Room.first(id: params[:room_id])
+    @room.user = @room.user
+    @room.name = params[:name]
+    @room.address = params[:address]
+    @room.description = params[:description]
+    @room.price = params[:price]
+    @room.save
+    redirect "/rooms/#{params[:room_id]}"
+  end
+
 end
