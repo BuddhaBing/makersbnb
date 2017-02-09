@@ -22,10 +22,13 @@ class User
     @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
-  
+
   def password_requirements_check
     return true if @password.nil?
-    return false if @password.length < 8
+    if @password.length < 8
+      self.errors.add(:password, "Password needs to be 8 chars or more")
+      return false
+    end
     true
   end
 
