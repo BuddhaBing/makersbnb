@@ -11,8 +11,8 @@ div id="bookings_made"
         |  £
         == booking.room.price
       section.dates
-        == booking.date_range.start_date.strftime("From %m/%d/%Y ")
-        == booking.date_range.end_date.strftime("to %m/%d/%Y")
+        == pretty_start_date(booking)
+        == pretty_end_date(booking)
       section.booking.status
         == booking_status(booking.confirmed)
 div id="bookings_received"
@@ -28,7 +28,7 @@ div id="bookings_received"
           |  £
           == booking.room.price
           section.dates
-            == booking.date_range.start_date.strftime("From %m/%d/%Y ")
-            == booking.date_range.end_date.strftime("to %m/%d/%Y")
+            == pretty_start_date(booking)
+            == pretty_end_date(booking)  
         section.booking.status
           == booking_status(booking.confirmed)

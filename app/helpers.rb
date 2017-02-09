@@ -17,4 +17,12 @@ module Helpers
     return "accepted" if status
     return "declined" unless status
   end
+
+  def pretty_start_date(booking)
+    booking.date_range.start_date.strftime("From %m/%d/%Y ")
+  end
+
+  def pretty_end_date(booking)
+    booking.date_range.end_date.strftime("to %m/%d/%Y ")
+  end
 end
