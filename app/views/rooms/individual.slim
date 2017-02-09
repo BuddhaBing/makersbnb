@@ -1,8 +1,14 @@
-h1 == @room.name
-h2 == @room.user.user_name 
-h2 == @room.address
-h2 == @room.description
-h2 == @room.price 
+p
+  == @room.name
+  br
+  == @room.user.user_name 
+  br
+  == @room.address
+  br
+  == @room.description
+  br
+  == @room.price 
+  br
 
 form id="date_range_form" action="/rooms" method="post" 
   &hidden name="room_id" value=@room.id
