@@ -13,6 +13,7 @@ class User
   property :password_digest,String,required: true, length: 60
 
   validates_confirmation_of :password
+  validates_with_method :password, method: :password_requirements_check
 
   has n, :rooms
   has n, :bookings
@@ -20,6 +21,15 @@ class User
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
+  end
+
+  def password_requirements_check
+    return true if @password.nil?
+    if @password.length < 8
+      self.errors.add(:password, "Password needs to be 8 chars or more")
+      return false
+    end
+    true
   end
 
   def self.authenticate(email, password)
@@ -30,5 +40,4 @@ class User
       nil
     end
   end
-
 end
