@@ -31,4 +31,8 @@ div id="bookings_received"
         == booked_room(room.id).date_range.start_date.strftime("From %m/%d/%Y ")
         == booked_room(room.id).date_range.end_date.strftime("to %m/%d/%Y")
       section.booking.status
-        == booking_status(booked_room(room.id))
+        == booking_status(booked_room(room.id).confirmed)
+        - if booked_room(room.id).confirmed == nil 
+          form id="status-buttons" name="status-buttons" action="/bookings" method="post"
+          &submit name="accept" id="accept" value="Accept"
+          &submit name="decline" id="decline" value="Decline"
