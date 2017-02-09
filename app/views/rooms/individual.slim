@@ -1,24 +1,58 @@
-p
-  == @room.name
-  br
-  == @room.user.user_name 
-  br
-  == @room.address
-  br
-  == @room.description
-  br
-  == @room.price 
-  br
+script src="/js/jquery.js" content-type="application/javascript";
+script src="/js/rooms/index.js" content-type="application/javascript";
 
-form id="date_range_form" action="/rooms" method="post" 
-  &hidden name="room_id" value=@room.id
-  
-  &hidden name="_method" value="patch" 
-  label for="start_date" Start Date:
-  &date name="start_date" id="start_date" required="true"
-  br
-  label for="end_date" End Date:
-  &date name="end_date" id="end_date" required="true"
-  br
-  &submit name="add_date" value="Confirm"
-  
+p
+  .info_room
+    == @room.user.user_name
+    br
+    == @room.name
+    br
+    == @room.address
+    br
+    == @room.description
+    br
+    == @room.price
+    br
+  .edit_room_form style="display:none;"
+    form id="edit-room" action="/rooms/edit" method="post"
+      &hidden name="_method" value="patch"
+      &hidden name="room_id" value=@room.id
+      label for="name" Name:
+      &text name="name" required="true" value=@room.name
+      br
+      label for="address" Address:
+      textarea name="address" id="address" form="edit-room" required="true" ==@room.address
+      br
+      label for="description" Description:
+      textarea name="description" id="description" form="edit-room" required="true" ==@room.description
+      br
+      label for="price" Price per night (£):
+      &number step="0.01" min="0" name="price" required="true" value=@room.price
+      &submit name="edit_room" value="Edit Room" form="edit-room"
+
+-if current_user == @room.user
+  &button value="Edit room" id="edit_room"
+
+-if current_user == @room.user
+  h2 add a list of dates the room is available
+  form id="date_range_form" action="/rooms/dates" method="post"
+  &hidden name="_method" value="patch"
+    &hidden name="room_id" value=@room.id
+    label for="start_date" Start Date:
+    &date name="start_date" id="start_date" required="true"
+    br
+    label for="end_date" End Date:
+    &date name="end_date" id="end_date" required="true"
+    br
+    &submit name="add_date" value="Confirm"
+
+-else
+  h2 Book a Room
+  h3 Find the perfect room, for the perfect trip
+  section.date-selector
+    form id="book-room" name="book-room" action="/bookings" method="post"
+      label for="from" From:
+      &date name="from" id="from" value="From"
+      label for="to" To:
+      &date name="to" id="to" value="To"
+      &submit name="book" id="book" value="Book"
