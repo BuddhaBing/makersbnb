@@ -3,7 +3,6 @@ ruby '2.3.3'
 
 group :test do
   gem 'rspec'
-  gem 'rake'
   gem 'rubocop-rspec'
   gem 'rubocop'
   gem 'coveralls', require: false
@@ -14,6 +13,7 @@ group :test do
   gem 'simplecov', require: false
 end
 
+gem 'rake'
 gem 'sinatra'
 gem 'sinatra-flash'
 gem 'sinatra-partial'
