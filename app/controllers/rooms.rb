@@ -15,7 +15,6 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/rooms' do
-
     room = Room.create(name: params[:name],
         address: params[:address],
         description: params[:description],

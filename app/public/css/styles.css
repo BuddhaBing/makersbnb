@@ -4,11 +4,13 @@ body {
     padding: 0;
     font-family: 'Cambay', sans-serif;
 }
+
 body.home {
     background-repeat: no-repeat;
     background-size: cover;
     background: url(/img/home-layer.png) fixed, url(/img/7.jpg) fixed;
 }
+
 .topbar {
     border-bottom: 1px solid #e1e8ed;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -37,13 +39,13 @@ h2.home {
     font-family: Arvo;
 }
 
-#existing-user > input[type="email"], #existing-user > input[type="password"] {
+#existing-user>input[type="email"], #existing-user>input[type="password"] {
     width: 38%;
     text-align: center;
-        font-size: 1em;
+    font-size: 1em;
 }
 
-#existing-user > label {
+#existing-user>label {
     line-height: 2.5;
     margin-right: .5em;
     margin-left: 1.5em;
@@ -121,7 +123,7 @@ main {
     text-align: right;
 }
 
-.sign-in-form, .sign-up-form {
+.sign-in-form, .sign-up-form, .list-room-form {
     padding: 3em;
     text-align: center;
     background: #fff;
@@ -132,7 +134,7 @@ main {
     -moz-box-shadow: 0 0 30px -7px rgb(0, 0, 0);
 }
 
-.sign-in-form input[type="text"], .sign-in-form input[type="password"], .sign-up-form input[type="text"], .sign-up-form input[type="password"] {
+.sign-in-form input[type="text"], .sign-in-form input[type="password"] {
     width: 25%;
     font-size: 100%;
     padding: 5px;
@@ -140,13 +142,62 @@ main {
     margin-left: 5px;
 }
 
-.sign-up-form input[type="text"], .sign-up-form input[type="password"], .sign-up-form input[type="email"] {
+.sign-up-form input[type="text"],
+.sign-up-form input[type="password"],
+.sign-up-form input[type="email"],
+.sign-up-form input[type="text"],
+.sign-up-form input[type="password"] {
     width: 40%;
     font-size: 100%;
     padding: 5px;
     margin-right: 1em;
     margin-left: 5px;
     margin-bottom: .5em
+}
+
+.list-room-form input[type="text"],
+.list-room-form input[type="password"] {
+    width: 75%;
+    font-size: 100%;
+    padding: 5px;
+    margin-right: 1em;
+    margin-left: 5px;
+    margin-bottom: .5em;
+}
+
+#list-room>input[type="number"] {
+    font-size: 1em;
+    margin-right: 1em;
+    width: 43%;
+}
+
+input[type="submit"] {
+    font-size: 1em;
+}
+
+#list-room input {
+    margin-bottom: 1.5em;
+}
+
+textarea#address, textarea#description {
+    width: 75%;
+    height: 100px;
+    color: black;
+    font-size: 1em!important;
+    margin-right: 1em;
+}
+
+.list-room-form {
+    text-align: right;
+}
+
+form#list-room {
+    margin-right: 12%;
+}
+
+#list-room > label {
+    margin-right: 10px;
+    vertical-align: top;
 }
 
 main.rooms {
