@@ -1,6 +1,7 @@
 class Makersbnb < Sinatra::Base
 
   get '/sessions/new' do
+    @body_class_name = "home"
     slim :'/sessions/new'
   end
 

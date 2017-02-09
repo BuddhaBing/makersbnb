@@ -1,11 +1,15 @@
 module Helpers
 
   def current_user
-    @current_user ||= User.get(session[:user_id]) # TODO - incorporate this into sessions controller
+    @current_user ||= User.get(session[:user_id])
   end
 
   def error?
-    flash[:errors] && !flash[:errors].empty? # TODO - incorporate this into controller
+    flash[:errors] && !flash[:errors].empty?
+  end
+
+  def body_class(class_name="default")
+    @body_class = class_name
   end
 
 end
