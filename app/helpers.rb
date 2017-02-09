@@ -12,4 +12,8 @@ module Helpers
     @body_class = class_name
   end
 
+  def booked_room(room_id)
+    Booking.first(room_id: room_id)
+  end
+
 end
