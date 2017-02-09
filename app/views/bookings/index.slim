@@ -32,3 +32,7 @@ div id="bookings_received"
             == pretty_end_date(booking)  
         section.booking.status
           == booking_status(booking.confirmed)
+          - if booking.confirmed == nil 
+            form id="status-buttons" name="status-buttons" action="/bookings" method="post"
+            &submit name="accept" id="accept" value="Accept"
+            &submit name="decline" id="decline" value="Decline"
