@@ -1,0 +1,24 @@
+header
+    h2 Book a Room
+    h3 Find the perfect room, for the perfect trip
+section.room-wrapper
+  section.room-container
+    - room = @room
+    article.room
+          section.room.room-name
+              == room.name
+          section.room.room-address
+              == room.address
+          section.room.room-description
+              == room.description
+          section.room.room-price
+              | £
+              == room.price 
+              |  per night
+  section.date-selector
+    form id="book-room" name="book-room" action="/bookings" method="post"
+      label for="from" From: 
+      &date name="from" id="from" value="From"
+      label for="to" To: 
+      &date name="to" id="to" value="To"
+      &submit name="book" id="book" value="Book"

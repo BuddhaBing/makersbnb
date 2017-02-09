@@ -208,16 +208,7 @@ article.rooms:hover {
 #bookings_received {
     float: right;
 }
-/*
-.cover {
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(/img/home-layer.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*opacity: 0.9;*/
-}*/
+
+.date-selector {
+    margin-left: 5%;
+}

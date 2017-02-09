@@ -9,6 +9,11 @@ class Makersbnb < Sinatra::Base
     slim :'rooms/index'
   end
 
+  get'/rooms/:id' do
+    @room = Room.first(id: params[:id])
+    slim :'bookings/new'
+  end
+
   post '/rooms' do
 
     room = Room.create(name: params[:name],
@@ -16,8 +21,7 @@ class Makersbnb < Sinatra::Base
         description: params[:description],
         price: params[:price],
         user: current_user)
-    "Room Listed" # TODO update this to a path later when we
-              # decide where it will redirect following room listing
+    redirect ('/rooms')
   end
 
 end
