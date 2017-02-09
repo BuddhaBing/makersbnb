@@ -1,7 +1,7 @@
 # makersbnb
 This is the week 6 project for [Makers Academy](http://www.makersacademy.com/). It is a clone of [AirBnB](https://www.airbnb.co.uk/) written in Ruby.
 
-[TODO] example heroku deployment : LINK GOES HERE
+[TODO] example heroku deployment : [here](http://makers-bnb-best-bnb.herokuapp.com/)
 [TODO] image of program
 
 functionality
