@@ -2,15 +2,14 @@ doctype html
 html
   head
     title
-    link href="/styles.css" rel="stylesheet"
+    link href="/css/styles.css" rel="stylesheet"
     link href="//fonts.googleapis.com/css?family=Slackey&subset=latin" rel="stylesheet"
     link href="//fonts.googleapis.com/css?family=Cambay&subset=latin" rel="stylesheet"
     link href="//fonts.googleapis.com/css?family=Arvo&subset=latin" rel="stylesheet"
-  body
+    link href="//fonts.googleapis.com/css?family=Emblema One&subset=latin" rel="stylesheet"
+  body class="#{body_class(@body_class_name)}"
     include partials/header.slim
     header.errors
       include partials/flash.slim
-
-
     main
       == yield
