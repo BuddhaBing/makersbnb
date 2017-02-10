@@ -45,6 +45,7 @@ module Helpers
 
   def pounds_to_pence(money)
     money.to_i * 100
+  end
 
   def booking_confirm(booking_id, confirmed)
     booking = Booking.first(id: booking_id)
