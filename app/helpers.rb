@@ -27,7 +27,7 @@ module Helpers
   end
 
   def format_date(date)
-    date.strftime("%m/%d/%Y")
+    date.strftime("%d/%m/%Y")
   end
 
   def sign_out_helper
