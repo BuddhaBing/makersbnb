@@ -1,12 +1,16 @@
 header
-    h2 My Rooms
+    h2 Find a Room
     h3 Find the perfect room, for the perfect trip
 main.rooms
     - if current_user
         section.list
             .list-button
                 a href="/rooms/new" List a Room
-    br            
+    section.search
+        form id="search-rooms" name="search-rooms" action="/rooms" method="post"
+            &date name="from" id="from"
+            &date name="to" id="to"
+            &submit name="search" id="search" value="Search"
     section.rooms-container
         - @rooms.each do |room|
             article.rooms

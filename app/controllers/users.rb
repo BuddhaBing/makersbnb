@@ -5,7 +5,7 @@ class Makersbnb < Sinatra::Base
     @user = User.new
     slim :'users/new'
   end
-
+  
   post '/users' do
     @user = User.create(email: params[:email],
                         name: params[:name],

@@ -5,8 +5,13 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/rooms' do
-    @rooms = Room.all
+    @rooms = Room.all(user_id: session[:user_id])
     slim :'rooms/index'
+  end
+  
+  get '/rooms/search' do
+    @rooms = Room.all
+    slim :'rooms/search'
   end
 
   post '/rooms' do
