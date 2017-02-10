@@ -6,5 +6,6 @@ feature 'Viewing rooms' do
     expect(page).to have_content Room.first.name
     expect(page).to have_content Room.first.address
     expect(page).to have_content Room.first.description
+    expect(page).to have_content Room.first.price
   end
 end

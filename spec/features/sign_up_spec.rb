@@ -29,4 +29,9 @@ feature "Registration of a new user" do
     expect { sign_up(email: 'test2@test.com') }.not_to change(User, :count)
     expect(page).to have_content "User name is already taken"
   end
+
+  scenario "User can't set password to less than minimum chars" do
+    expect { sign_up(password: 12345, password_confirmation: 12345) }.not_to change(User, :count)
+    expect(page).to have_content('Password needs to be 8 chars or more')
+  end
 end
