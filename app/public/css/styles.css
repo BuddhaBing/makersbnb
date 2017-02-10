@@ -290,3 +290,7 @@ article.rooms:hover {
     margin-bottom: 2em;
     margin-top: 1em;
 }
+
+.confirmation_link {
+    color: deepskyblue;
+}
