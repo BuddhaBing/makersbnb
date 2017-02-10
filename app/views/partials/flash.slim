@@ -5,4 +5,6 @@
   ul id='errors'
     h4 Oops, looks like we've got some errors...
     - flash[:errors].each do |error|
-      li == error
+      - if error 
+        li
+          == error

@@ -21,6 +21,11 @@ body.home {
     margin-bottom: .5em;
 }
 
+#errors {
+    list-style: none;
+    text-align: center;
+}
+
 h1 {
     margin: auto;
     line-height: 1.8;
