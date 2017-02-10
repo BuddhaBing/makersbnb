@@ -28,7 +28,7 @@ class Room
 
   def conflicts_with_other_booking(booking_date_range)
     bookings.each do |booking| #checks wether date is entirely within an available slot
-      return true if booking.date.overlaps? booking_date_range
+      return true if booking.date_range.overlaps? booking_date_range
     end
     false
   end

@@ -36,4 +36,8 @@ module Helpers
     redirect '/'
   end
 
+  def date_valid?(start_date, end_date)
+    start_date != "" && end_date != ""
+  end
+
 end

@@ -15,4 +15,10 @@ feature "Book a room" do
     book_room
     expect(page).to have_content Room.first.name
   end
+
+  scenario "I cannot book a room for dates that are not available" do
+    create_users_and_room
+    book_room
+    expect(page).to have_content "The dates entered are not available"
+  end
 end
