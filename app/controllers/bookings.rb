@@ -14,5 +14,9 @@ class Makersbnb < Sinatra::Base
                    date_range_id: date.id)
     redirect '/bookings'
   end
+  
+  get '/bookings/update/' do
+    slim :'bookings/confirm'
+  end
 
 end
