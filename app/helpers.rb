@@ -19,11 +19,15 @@ module Helpers
   end
 
   def pretty_start_date(booking)
-    booking.date_range.start_date.strftime("From %m/%d/%Y ")
+    "From #{format_date(booking.date_range.start_date)} "
   end
 
   def pretty_end_date(booking)
-    booking.date_range.end_date.strftime("to %m/%d/%Y ")
+    "to #{format_date(booking.date_range.end_date)}"
+  end
+
+  def format_date(date)
+    date.strftime("%m/%d/%Y")
   end
 
   def sign_out_helper
