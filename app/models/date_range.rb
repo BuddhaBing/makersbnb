@@ -7,8 +7,10 @@ class DateRange
 
   has n, :rooms, through: Resource
 
+  def covers? (other)
+    !((start_date > other.start_date) or (end_date < other.end_date))
+  end
   def overlaps? (other)
-    return false if (start_date > other.start_date) or (end_date < other.end_date)
     (start_date <= other.end_date) && (other.start_date <= end_date)
   end
 end
