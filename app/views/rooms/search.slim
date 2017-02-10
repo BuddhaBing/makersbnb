@@ -23,5 +23,5 @@ main.rooms
                         == room.description
                     section.room.room-price
                         | £
-                        == room.price
+                        == pretty_money(room.price)
                         |  per night

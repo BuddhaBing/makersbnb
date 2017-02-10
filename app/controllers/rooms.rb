@@ -18,7 +18,7 @@ class Makersbnb < Sinatra::Base
     room = Room.create(name: params[:name],
         address: params[:address],
         description: params[:description],
-        price: params[:price],
+        price: pounds_to_pence(params[:price]),
         user: current_user)
     redirect ('/rooms')
   end
@@ -42,7 +42,7 @@ class Makersbnb < Sinatra::Base
     @room.name = params[:name]
     @room.address = params[:address]
     @room.description = params[:description]
-    @room.price = params[:price]
+    @room.price = pounds_to_pence(params[:price])
     @room.save
     redirect "/rooms/#{params[:room_id]}"
   end

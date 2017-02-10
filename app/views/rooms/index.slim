@@ -6,7 +6,7 @@ main.rooms
         section.list
             .list-button
                 a href="/rooms/new" List a Room
-    br            
+    br
     section.rooms-container
         - @rooms.each do |room|
             article.rooms
@@ -19,5 +19,5 @@ main.rooms
                         == room.description
                     section.room.room-price
                         | £
-                        == room.price
+                        == pretty_money(room.price)
                         |  per night
