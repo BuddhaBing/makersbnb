@@ -33,12 +33,12 @@ module Helpers
   def sign_out_helper
     session[:user_id] = nil
     flash.keep[:notice] = 'Goodbye!'
-    
+
   end
 
   def booking_confirm(booking_id, confirmed)
     booking = Booking.first(id: booking_id)
-    if confirmed
+    if confirmed == "true"
       booking.update(confirmed: true)
     else
       booking.update(confirmed: false)
