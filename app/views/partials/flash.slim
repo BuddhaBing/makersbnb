@@ -4,7 +4,6 @@
 - if flash[:errors] && !flash[:errors].empty?
   ul id='errors'
     h4 Oops, looks like we've got some errors...
-    == p flash[:errors]
     - flash[:errors].each do |error|
       - if error 
         li

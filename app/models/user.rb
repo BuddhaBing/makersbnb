@@ -29,6 +29,7 @@ class User
       self.errors.add(:password, "Password needs to be 8 chars or more")
       return false
     end
+    true
   end
 
   def self.authenticate(email, password)
