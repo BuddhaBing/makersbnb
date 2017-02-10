@@ -33,6 +33,5 @@ div id="bookings_received"
         section.booking.status
           == booking_status(booking.confirmed)
           - if booking.confirmed == nil 
-            form id="status-buttons" name="status-buttons" action="/bookings" method="post"
-            &submit name="accept" id="accept" value="Accept"
-            &submit name="decline" id="decline" value="Decline"
+            a href="bookings/update/?booking=#{booking.id}&confirm=true" Accept
+            a href="bookings/update/?booking=#{booking.id}&confirm=false" Decline

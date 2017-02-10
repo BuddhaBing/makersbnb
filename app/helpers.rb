@@ -33,7 +33,16 @@ module Helpers
   def sign_out_helper
     session[:user_id] = nil
     flash.keep[:notice] = 'Goodbye!'
-    redirect '/'
+    
   end
 
+  def booking_confirm(booking_id, confirmed)
+    booking = Booking.first(id: booking_id)
+    if confirmed
+      booking.update(confirmed: true)
+    else
+      booking.update(confirmed: false)
+    end
+
+  end
 end

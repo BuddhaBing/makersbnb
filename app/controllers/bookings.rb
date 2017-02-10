@@ -15,4 +15,9 @@ class Makersbnb < Sinatra::Base
     redirect '/bookings'
   end
 
+  get '/bookings/update/' do
+    slim :'bookings/confirm'
+    redirect '/bookings'
+  end
+
 end
