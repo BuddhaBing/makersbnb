@@ -1,11 +1,15 @@
-# describe Room do
-#
-#   let!(:room) do
-#     Room.create(name: "new_room",
-#                 address: "1 Fake Road, Fakesville, Notrealshire, FA43 123",
-#                 description: "Lovely non-existant location, very quiet",
-#                 price: 500)
-#   end
+describe Room do
+  before(:each) do
+    sign_up(username: "landlord")
+    list_room
+    add_dates
+    sign_out
+    sign_up(email: "t@t.com",username: "Renter")
+    #select_room
+  end
+
+  it{expect(true).to be true}
+end
 #
 #   let!(:date1) do
 #     create_date("2017-02-01")

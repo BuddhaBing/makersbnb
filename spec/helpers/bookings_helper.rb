@@ -1,13 +1,6 @@
-def book_room
-  select_room
-  fill_in :from, with: "2017-02-09"
-  fill_in :to, with: "2017-02-10"
+def book_room(room: 'room_1',from: Time.new(2017,1,1),to: Time.new(2017,1,1))
+  select_room room
+  fill_in :from, with: from
+  fill_in :to, with: to
   click_button "Book"
-end
-
-def check_pending_bookings
-  book_room
-  sign_out
-  sign_in
-  click_link("My Bookings")
 end
