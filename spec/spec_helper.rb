@@ -1,18 +1,8 @@
 require 'coveralls'
 require 'simplecov'
 
-# START coveralls
-# SimpleCov.formatters = [
-#   SimpleCov::Formatter::HTMLFormatter,
-#   Coveralls::SimpleCov::Formatter
-# ]
-# Coveralls.wear!
-# END coveralls
-
-# START simplecov
 require 'simplecov'
 SimpleCov.start
-# END simplecov
 
 ENV['RACK_ENV'] = 'test'
 
@@ -30,6 +20,7 @@ require_relative 'helpers/session_helper.rb'
 require_relative 'helpers/room_helper.rb'
 require_relative 'helpers/bookings_helper.rb'
 require_relative 'helpers/user_helper.rb'
+require_relative 'helpers/date_helper.rb'
 
 include DatabaseCleaner
 
