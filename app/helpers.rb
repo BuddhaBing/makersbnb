@@ -25,4 +25,11 @@ module Helpers
   def pretty_end_date(booking)
     booking.date_range.end_date.strftime("to %m/%d/%Y ")
   end
+
+  def sign_out_helper
+    session[:user_id] = nil
+    flash.keep[:notice] = 'Goodbye!'
+    redirect '/'
+  end
+
 end

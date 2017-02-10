@@ -30,12 +30,20 @@ h1 {
     font-size: 2.2em;
 }
 
-h2.home {
+h2.home, #notice {
     text-align: center;
     margin-bottom: 1em;
     color: #fff;
     font-size: 4em;
     text-shadow: 0 3px 4px #444;
+    font-family: Arvo;
+}
+
+h2.welcome {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 3em;
+    text-shadow: 0 2px 2px #fff;
     font-family: Arvo;
 }
 
@@ -74,29 +82,18 @@ main {
     color: deepskyblue;
 }
 
-.nav_form {
-    float: right;
-    margin-right: 2.5%;
-    margin-top: -5%;
-    padding: 0.5%;
-    background: #f5f5f5;
-    border: inset;
-    border-radius: 5%;
+nav {
+    padding-top: 15px;
+    position: absolute;
+    right: 0;
 }
 
-.nav_form_links {
+.nav_links {
     display: inline-block;
-    background-color: white;
     color: black;
-    border: 2px solid deepskyblue;
     border-radius: 5px;
     padding: 5px 10px;
-    margin-top: 10%;
-}
-
-#notice {
-    padding: 1em;
-    font-size: 170%;
+    margin-right: 15px;
 }
 
 .sign-in, .register {
