@@ -16,9 +16,8 @@ class Makersbnb < Sinatra::Base
     end
   end
 
-  delete '/sessions' do
-    session[:user_id] = nil
-    flash.keep[:notice] = 'Goodbye!'
-    redirect '/'
+  get '/sessions/delete' do
+    slim :'sessions/delete'
   end
+
 end

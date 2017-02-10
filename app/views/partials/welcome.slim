@@ -1,14 +1,5 @@
 - if current_user
-  h2 Welcome, #{current_user.name}
-  form class="nav_form" action='/sessions' method="post"
-    &hidden name="_method" value="delete"
-    &submit name="sign_out" value="Sign out"
-    br
-    a class="nav_form_links" href="/rooms/search" Find a Room
-    br
-    a class="nav_form_links" href="/bookings" My Bookings
-    br
-    a class="nav_form_links" href="/rooms" My Rooms
+  h2.welcome Welcome, #{current_user.name}
 - else
   h2 Feel at home, anywhere
   h3 Sign up to Makersbnb
