@@ -30,6 +30,7 @@ require_relative 'helpers/session_helper.rb'
 require_relative 'helpers/room_helper.rb'
 require_relative 'helpers/bookings_helper.rb'
 require_relative 'helpers/user_helper.rb'
+require_relative 'helpers/date_helper.rb'
 
 include DatabaseCleaner
 

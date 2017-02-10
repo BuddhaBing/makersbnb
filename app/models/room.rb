@@ -11,10 +11,10 @@ class Room
   has n, :bookings
   has n, :date_ranges, through: Resource
 
-  def bookable?(date_range)
-    #for each date in between dates run booked?
-  end
-
-  def booked?(date)
+  def bookable?(booking_date_range)
+    date_ranges.each do |date_range|
+      return false unless date_range.overlaps? booking_date_range
+    end
+    true
   end
 end
