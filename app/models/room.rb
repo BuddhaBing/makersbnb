@@ -11,7 +11,7 @@ class Room
   has n, :bookings
   has n, :date_ranges, through: Resource
 
-  def dates_booked(date_1, date_2)
+  def bookable?(date_range)
     #for each date in between dates run booked?
   end
 

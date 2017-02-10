@@ -16,7 +16,15 @@ def create_users_and_room
   visit('/rooms/search')
 end
 
-def select_room
-  create_users_and_room
-  click_link ('room_1')
+def select_room(room = "room_1")
+  click_link (room)
+end
+
+def add_dates(room: Room.first,
+              start_date: Time.new(2016,1,1),
+              end_date: Time.new(2016,1,1))
+  date = DateRange.first_or_create(start_date: start_date,
+                                   end_date: end_date)
+  room.date_ranges << date
+  room.save
 end
