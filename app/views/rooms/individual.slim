@@ -9,6 +9,11 @@ p
   br
   == @room.price
   br
+  - @date_range.each do |date|
+    | Available from 
+    == format_date(date.start_date)
+    |  to 
+    == format_date(date.end_date)
 .edit_room_form style="display:none;"
   form id="edit-room" action="/rooms/edit" method="post"
     &hidden name="_method" value="patch"

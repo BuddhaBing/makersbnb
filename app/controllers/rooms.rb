@@ -8,7 +8,7 @@ class Makersbnb < Sinatra::Base
     @rooms = Room.all(user_id: session[:user_id])
     slim :'rooms/index'
   end
-  
+
   get '/rooms/search' do
     @rooms = Room.all
     slim :'rooms/search'
@@ -25,6 +25,7 @@ class Makersbnb < Sinatra::Base
 
   get '/rooms/:room_id' do
     @room = Room.first(id: params[:room_id])
+    @date_range = @room.date_ranges
     slim :'rooms/individual'
   end
 
