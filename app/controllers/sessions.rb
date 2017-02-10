@@ -18,6 +18,7 @@ class Makersbnb < Sinatra::Base
 
   get '/sessions/delete' do
     slim :'sessions/delete'
+    redirect '/'
   end
 
 end
