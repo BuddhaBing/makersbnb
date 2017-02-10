@@ -36,6 +36,16 @@ module Helpers
 
   end
 
+  def pretty_money(money)
+    pennies = ("00" + money.to_s)[-2..-1]
+    pounds =  (money.to_s[0..-3])
+    pounds = "0" if pounds == ""
+    "#{pounds}.#{pennies}"
+  end
+
+  def pounds_to_pence(money)
+    money.to_i * 100
+
   def booking_confirm(booking_id, confirmed)
     booking = Booking.first(id: booking_id)
     if confirmed == "true"
@@ -43,6 +53,5 @@ module Helpers
     else
       booking.update(confirmed: false)
     end
-
   end
 end

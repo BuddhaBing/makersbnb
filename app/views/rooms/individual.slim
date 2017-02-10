@@ -7,7 +7,8 @@ p
   br
   == @room.description
   br
-  == @room.price
+  | £
+  == pretty_money(@room.price)
   br
   - @date_range.each do |date|
     | Available from 
@@ -28,7 +29,7 @@ p
     textarea name="description" id="description" form="edit-room" required="true" ==@room.description
     br
     label for="price" Price per night (£):
-    &number step="0.01" min="0" name="price" required="true" value=@room.price
+    &number step="0.01" min="0" name="price" required="true" value=pretty_money(@room.price)
     &submit name="edit_room" value="Edit Room" form="edit-room"
 
 -if current_user == @room.user
