@@ -1,15 +1,13 @@
 feature "display bookings I've made" do
-  #waiting on being able to make bookings
-  xscenario "I can see bookings I've made" do
-    bookings_made
+  scenario "I can see bookings I've made" do
+    book_room
     expect(page).to have_content("Trump Towers")
   end
 end
 
 feature "display bookings I've received" do
-  #waiting on being able to make bookings
-  xscenario "I can see bookings for my rooms" do
-    bookings_received
-    expect(page).to have_content("The Penthouse")
+  scenario "I can see bookings for my rooms" do
+    check_pending_bookings
+    expect(page).to have_content("Trump Towers")
   end
 end
