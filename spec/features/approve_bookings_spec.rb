@@ -5,7 +5,7 @@ feature "Confirm a booking " do
     sign_out
     sign_in
     click_link ('My Bookings')
-    click_link ('Accept')
+    click_link ('Confirm')
      bookings_received = find_by_id("bookings_received")
      expect(bookings_received).to_not have_content ('pending')
     expect(bookings_received).to have_content ('accepted')

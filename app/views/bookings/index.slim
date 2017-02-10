@@ -32,6 +32,7 @@ div id="bookings_received"
             == pretty_end_date(booking)  
         section.booking.status
           == booking_status(booking.confirmed)
+          br
           - if booking.confirmed == nil 
-            a href="bookings/update/?booking=#{booking.id}&confirm=true" Accept
-            a href="bookings/update/?booking=#{booking.id}&confirm=false" Decline
+            |<a class ="confirmation_link" href="bookings/update/?booking=#{booking.id}&confirm=true"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Confirm </a>
+            |<a class ="confirmation_link" href="bookings/update/?booking=#{booking.id}&confirm=false"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Decline</a>
