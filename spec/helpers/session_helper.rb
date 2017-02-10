@@ -7,5 +7,5 @@ def sign_in(email: 'test@test.com',
 end
 
 def sign_out
-  click_button 'Sign out'
+  click_on 'Sign out'
 end
