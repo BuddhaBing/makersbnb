@@ -4,8 +4,8 @@
 
 ## An [AirBnB](https://www.airbnb.co.uk/) clone, written in Ruby.
 
-[![Build Status](https://travis-ci.org/treborb/bank_tech_test.svg?branch=master)](https://travis-ci.org/treborb/bank_tech_test)
-[![codecov](https://codecov.io/gh/treborb/bank_tech_test/branch/master/graph/badge.svg)](https://codecov.io/gh/treborb/bank_tech_test)
+[![Build Status](https://travis-ci.org/treborb/makersbnb.svg?branch=master)](https://travis-ci.org/treborb/makersbnb)
+[![codecov](https://codecov.io/gh/treborb/makersbnb/branch/master/graph/badge.svg)](https://codecov.io/gh/treborb/makersbnb)
 
 ## Technologies
 * [Ruby v2.3.3](https://www.ruby-lang.org/en/)
