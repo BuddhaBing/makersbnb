@@ -3,6 +3,7 @@ rvm:
 before_install:
  - sudo apt-get update -qq
  - sudo apt-get install -qq postgresql-server-dev-9.6
- - sudo createdb makers_bnb_test
- - sudo createdb makers_bnb_development
+before_script:
+ - psql -c 'create database makers_bnb_test;' -U postgres
+ - psql -c 'create database makers_bnb_development;' -U postgres
 script: bundle exec rspec spec
