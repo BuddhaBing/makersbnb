@@ -1,8 +1,8 @@
-require 'coveralls'
-require 'simplecov'
-
 require 'simplecov'
 SimpleCov.start
+
+require 'codecov'
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
 
 ENV['RACK_ENV'] = 'test'
 
@@ -13,8 +13,6 @@ require 'capybara/rspec'
 require 'capybara/poltergeist'
 require 'rspec'
 require 'database_cleaner'
-
-# require_relative 'support/database_cleaner'
 
 require_relative 'helpers/session_helper.rb'
 require_relative 'helpers/room_helper.rb'

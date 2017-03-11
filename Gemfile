@@ -5,12 +5,11 @@ group :test do
   gem 'rspec'
   gem 'rubocop-rspec'
   gem 'rubocop'
-  gem 'coveralls', require: false
   gem 'capybara'
   gem 'pry-byebug'
   gem 'rspec-sinatra'
   gem 'database_cleaner'
-  gem 'simplecov', require: false
+  gem 'codecov', :require => false, :group => :test
 end
 
 gem 'rake'
